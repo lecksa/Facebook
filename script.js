@@ -21,7 +21,7 @@ fetch(base_url + "users")
 function reload(arr, place) {
     place.innerHTML = ""
 
-    for (let i = 0; i < arr.length && i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
         place.innerHTML += `
         <div class="box">
             <h1>${arr[i].name}</h1>
@@ -106,12 +106,12 @@ function reload_all(arr, place) {
 function cut(arr, place) {
 
     p_1.onclick = () => {
-        if (p_1.innerHTML === "Показать еще 1 пользователя") {
+        if (p_1.innerHTML === "Показать еще 3 пользователей") {
             p_1.innerHTML = "Скрыть"
             p_1.classList.add("hide")
             reload_all(arr.filter(user => user.age <= 18), place)
         } else {
-            p_1.innerHTML = "Показать еще 1 пользователя"
+            p_1.innerHTML = "Показать еще 3 пользователей"
             p_1.classList.remove("hide")
             reload(arr.filter(user => user.age <= 18), place)
         }
@@ -158,12 +158,12 @@ function cut(arr, place) {
 
 function cut_2(arr, place) {
     p_2.onclick = () => {
-        if (p_2.innerHTML === "Показать еще 5 пользователей") {
+        if (p_2.innerHTML === "Показать еще 3 пользователей") {
             p_2.innerHTML = "Скрыть"
             p_2.classList.add("hide")
             reload_all(arr.filter(user => user.age > 18 && user.age <= 25), place)
         } else {
-            p_2.innerHTML = "Показать еще 5 пользователей"
+            p_2.innerHTML = "Показать еще 3 пользователей"
             p_2.classList.remove("hide")
             reload(arr.filter(user => user.age > 18 && user.age <= 25), place)
         }
