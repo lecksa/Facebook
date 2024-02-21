@@ -1,4 +1,4 @@
-let base_url = "http://localhost:8080/"
+let base_url = "http://localhost:5500/"
 
 let wrap_1 = document.querySelector('.wrap_1')
 let wrap_2 = document.querySelector('.wrap_2')
@@ -38,6 +38,28 @@ function reload(arr, place) {
         `
     }
 }
+
+function reload_all(arr, place) {
+    place.innerHTML = ""
+
+    for (let i = 0; i < arr.length; i++) {
+        place.innerHTML += `
+        <div class="box">
+            <h1>${arr[i].name}</h1>
+            <p>
+                age: ${arr[i].age} <br>
+                company: ${arr[i].company.name} <br>
+                website: ${arr[i].website} <br>
+                phone: ${arr[i].phone}
+            </p>
+            <button>
+                <a href="/index_2.html?id=${arr[i].id}">Подробнее</a>
+            </button>
+        </div>
+        `
+    }
+}
+
 
 // function reload_2(arr, place_2) {
 //     place_2.innerHTML = ""
@@ -84,13 +106,14 @@ function reload(arr, place) {
 function cut(arr, place) {
 
     p_1.onclick = () => {
-        if (p_1.innerHTML === "Показать еще 1 автомобилей") {
+        if (p_1.innerHTML === "Показать еще 1 пользователя") {
             p_1.innerHTML = "Скрыть"
             p_1.classList.add("hide")
-            reload(arr, place)
+            reload_all(arr.filter(user => user.age <= 18), place)
         } else {
-            p_1.innerHTML = "Показать еще 1 автомобилей"
+            p_1.innerHTML = "Показать еще 1 пользователя"
             p_1.classList.remove("hide")
+            reload(arr.filter(user => user.age <= 18), place)
         }
     }
 
@@ -135,13 +158,14 @@ function cut(arr, place) {
 
 function cut_2(arr, place) {
     p_2.onclick = () => {
-        if (p_2.innerHTML === "Показать еще 5 автомобилей") {
+        if (p_2.innerHTML === "Показать еще 5 пользователей") {
             p_2.innerHTML = "Скрыть"
             p_2.classList.add("hide")
-            reload(arr.filter(user => user.age > 18 && user.age <= 25), place)
+            reload_all(arr.filter(user => user.age > 18 && user.age <= 25), place)
         } else {
-            p_2.innerHTML = "Показать еще 5 автомобилей"
+            p_2.innerHTML = "Показать еще 5 пользователей"
             p_2.classList.remove("hide")
+            reload(arr.filter(user => user.age > 18 && user.age <= 25), place)
         }
     }
 
@@ -150,13 +174,14 @@ function cut_2(arr, place) {
 
 function cut_3(arr, place) {
     p_3.onclick = () => {
-        if (p_3.innerHTML === "Показать еще 2 автомобилей") {
+        if (p_3.innerHTML === "Показать еще 2 пользователей") {
             p_3.innerHTML = "Скрыть"
             p_3.classList.add("hide")
-            reload(arr.filter(user => user.age > 25), place)
+            reload_all(arr.filter(user => user.age > 25), place)
         } else {
-            p_3.innerHTML = "Показать еще 2 автомобилей"
+            p_3.innerHTML = "Показать еще 2 пользователей"
             p_3.classList.remove("hide")
+            reload(arr.filter(user => user.age > 25), place)
         }
     }
 
