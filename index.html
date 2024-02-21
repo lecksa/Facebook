@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 10px 5%;
+            display: flex;
+            gap: 53px;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-weight: 700;
+                font-size: 48px;
+                color: black;
+            }
+
+            button {
+                width: 242px;
+                height: 42px;
+                border-radius: 4px;
+                background-color: #0071E3;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .wrap_1,
+            .wrap_2,
+            .wrap_3 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .box {
+            width: 300px;
+            height: 193px;
+            border-radius: 10px;
+            border: 1px solid #007FFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+
+            h1 {
+                font-weight: 400;
+                font-size: 18px;
+                color: black;
+            }
+
+            p {
+                font-weight: 500 !important;
+                font-size: 14px !important;
+                color: rgba(0, 0, 0, 0.466) !important;
+            }
+
+            button {
+                width: 260px;
+                height: 42px;
+                border-radius: 4px;
+                background-color: #0071E3;
+                font-weight: 500;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Facebook 2</h1>
+
+        <div class="wrap">
+            <h1>Less than 15 years</h1>
+            <div class="wrap_1"></div>
+            <p id="f" style="cursor: pointer; font-weight: 600; font-size: 14px; color: #0071E3; text-decoration: underline;">Показать еще 1 автомобилей</p>
+        </div>
+
+        <div class="wrap">
+            <h1>Less than 25 years</h1>
+            <div class="wrap_2"></div>
+            <p id="s" style="cursor: pointer; font-weight: 600; font-size: 14px; color: #0071E3; text-decoration: underline;">Показать еще 5 автомобилей</p>
+        </div>
+
+        <div class="wrap">
+            <h1>Other</h1>
+            <div class="wrap_3"></div>
+            <p id="t" style="cursor: pointer; font-weight: 600; font-size: 14px; color: #0071E3; text-decoration: underline;">Показать еще 2 автомобилей</p>
+        </div>
+
+        <button>
+            <a href="./index_3.html">О нас</a>
+        </button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

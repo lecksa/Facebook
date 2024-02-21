@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 55px;
+            
+            h1 {
+                font-weight: 700;
+                font-size: 48px;
+            }
+
+            .text{
+                width: 400px;
+            }
+
+            button {
+                width: 242px;
+                height: 42px;
+                border-radius: 4px;
+                background-color: #0071E3;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="info">
+            <h1></h1>
+
+            <div class="text">
+                <p></p>
+            </div>
+
+            <div class="btns">
+                <button>
+                    <a href="./index_3.html">О нас</a>
+                </button>
+                <button id="back">
+                    <a href="./index.html">На главную</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./script_2.js"></script>
+</body>
+
+</html>
