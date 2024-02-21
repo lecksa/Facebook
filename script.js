@@ -106,14 +106,16 @@ function reload_all(arr, place) {
 function cut(arr, place) {
 
     p_1.onclick = () => {
+        let filtered = arr.filter(user => user.age <= 18)
+
         if (p_1.innerHTML === "Показать еще 3 пользователей") {
             p_1.innerHTML = "Скрыть"
             p_1.classList.add("hide")
-            reload_all(arr.filter(user => user.age <= 18), place)
+            reload_all(filtered, place)
         } else {
             p_1.innerHTML = "Показать еще 3 пользователей"
             p_1.classList.remove("hide")
-            reload(arr.filter(user => user.age <= 18), place)
+            reload(filtered, place)
         }
     }
 
@@ -157,33 +159,37 @@ function cut(arr, place) {
 }
 
 function cut_2(arr, place) {
+    let filtered = arr.filter(user => user.age > 18 && user.age <= 25)
+
     p_2.onclick = () => {
         if (p_2.innerHTML === "Показать еще 3 пользователей") {
             p_2.innerHTML = "Скрыть"
             p_2.classList.add("hide")
-            reload_all(arr.filter(user => user.age > 18 && user.age <= 25), place)
+            reload_all(filtered, place)
         } else {
             p_2.innerHTML = "Показать еще 3 пользователей"
             p_2.classList.remove("hide")
-            reload(arr.filter(user => user.age > 18 && user.age <= 25), place)
+            reload(filtered, place)
         }
     }
 
-    reload(arr.filter(user => user.age > 18 && user.age <= 25), place)
+    reload(filtered, place)
 }
 
 function cut_3(arr, place) {
+    let filtered = arr.filter(user => user.age > 25)
+
     p_3.onclick = () => {
         if (p_3.innerHTML === "Показать еще 2 пользователей") {
             p_3.innerHTML = "Скрыть"
             p_3.classList.add("hide")
-            reload_all(arr.filter(user => user.age > 25), place)
+            reload_all(filtered, place)
         } else {
             p_3.innerHTML = "Показать еще 2 пользователей"
             p_3.classList.remove("hide")
-            reload(arr.filter(user => user.age > 25), place)
+            reload(filtered, place)
         }
     }
 
-    reload(arr.filter(user => user.age > 25), place)
+    reload(filtered, place)
 }
