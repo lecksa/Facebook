@@ -1,4 +1,4 @@
-let base_url = "http://localhost:5500/"
+let base_url = "http://localhost:5500/users"
 
 let wrap_1 = document.querySelector('.wrap_1')
 let wrap_2 = document.querySelector('.wrap_2')
@@ -8,7 +8,7 @@ let p_1 = document.getElementById('f')
 let p_2 = document.getElementById('s')
 let p_3 = document.getElementById('t')
 
-fetch(base_url + "users")
+fetch(base_url)
     .then(res => res.json())
     .then(res => {
         cut(res, wrap_1)
