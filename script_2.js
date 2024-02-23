@@ -10,5 +10,5 @@ fetch("http://localhost:8080/users/" + id)
     .then(res => {
         h1.innerHTML = "User:" + ' ' + id + " " + '-' + " " + res.name
 
-        p.innerHTML = JSON.stringify(res)
+        p.innerHTML = JSON.stringify(res, null, 2)
     })
