@@ -1,4 +1,4 @@
-let base_url = "http://localhost:5500/users"
+let base_url = "http://localhost:8080/users"
 
 let wrap_1 = document.querySelector('.wrap_1')
 let wrap_2 = document.querySelector('.wrap_2')
