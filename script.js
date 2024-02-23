@@ -32,7 +32,7 @@ function reload(arr, place) {
                 phone: ${arr[i].phone}
             </p>
             <button>
-                <a href="/index_2.html?id=${arr[i].id}">Подробнее</a>
+                <a href="/Facebook/index_2.html?id=${arr[i].id}">Подробнее</a>
             </button>
         </div>
         `
