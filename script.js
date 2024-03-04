@@ -1,4 +1,4 @@
-let base_url = "http://localhost:8080/users"
+let base_url = "http://localhost:8090/users"
 
 let wrap_1 = document.querySelector('.wrap_1')
 let wrap_2 = document.querySelector('.wrap_2')
@@ -60,49 +60,6 @@ function reload_all(arr, place) {
     }
 }
 
-
-// function reload_2(arr, place_2) {
-//     place_2.innerHTML = ""
-
-//     for (let item of arr) {
-//         place_2.innerHTML += `
-//         <div class="box">
-//             <h1>${item.name}</h1>
-//             <p>
-//                 age: ${item.age} <br>
-//                 company: ${item.company.name} <br>
-//                 website: ${item.website} <br>
-//                 phone: ${item.phone}
-//             </p>
-//             <button>
-//                 <a href="/index_2.html?id=${item.id}">Подробнее</a>
-//             </button>
-//         </div>
-//         `
-//     }
-// }
-
-// function reload_3(arr, place_3) {
-//     place_3.innerHTML = ""
-
-//     for (let item of arr) {
-//         place_3.innerHTML += `
-//         <div class="box">
-//             <h1>${item.name}</h1>
-//             <p>
-//                 age: ${item.age} <br>
-//                 company: ${item.company.name} <br>
-//                 website: ${item.website} <br>
-//                 phone: ${item.phone}
-//             </p>
-//             <button>
-//                 <a href="/index_2.html?id=${item.id}">Подробнее</a>
-//             </button>
-//         </div>
-//         `
-//     }
-// }
-
 function cut(arr, place) {
 
     p_1.onclick = () => {
@@ -120,42 +77,6 @@ function cut(arr, place) {
     }
 
     reload(arr.filter(user => user.age <= 18), place)
-
-    // for (let item of arr) {
-    //     if (item.age <= 18) {
-    //         fetch(base_url + "junior", {
-    //             method: "post",
-    //             body: JSON.stringify(item),
-    //             headers: {
-    //                 "Content-Type": "application/json"
-    //             }
-    //         })
-    //             .then(res => res.json())
-    //             .then(res => {
-    //                 let filtered = JSON.stringify(res).slice(0, 4)
-    //                 reload(filtered, place_1)
-    //             })
-
-
-    //         p_1.onclick = () => {
-    //             if (p_1.innerHTML === "Показать еще 1 автомобилей") {
-    //                 p_1.innerHTML = "Скрыть"
-    //                 p_1.classList.add("hide")
-    //                 fetch(base_url + "junior")
-    //                     .then(res => res.json())
-    //                     .then(res => reload(res, place_1))
-    //             } else {
-    //                 p_1.innerHTML = "Показать еще 1 автомобилей"
-    //                 p_1.classList.remove("hide")
-    //                 fetch(base_url + "users")
-    //                     .then(res => res.json())
-    //                     .then(res => {
-    //                         cut(res, wrap_1)
-    //                     })
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 function cut_2(arr, place) {

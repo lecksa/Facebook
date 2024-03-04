@@ -5,7 +5,7 @@ let p = document.querySelector('p')
 
 let object = document.querySelector('.object')
 
-fetch("http://localhost:8080/users/" + id)
+fetch("http://localhost:8090/users/" + id)
     .then(res => res.json())
     .then(res => {
         h1.innerHTML = "User:" + ' ' + id + " " + '-' + " " + res.name
